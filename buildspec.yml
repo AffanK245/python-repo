@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo "Starting Flask app..."
-      - nohup python app
+      - nohup python notes.py
 
 artifacts:
   files:
