@@ -3,13 +3,15 @@ version: 0.2
 phases:
   install:
     commands:
-      - yum update -y
-      - yum install -y python3-tkinter
+      - pip install -r requirements.txt
 
   build:
     commands:
-      - python3 notes.py
+      - echo "Starting Flask app..."
+      - nohup python app
 
 artifacts:
   files:
     - notes.py
+    - templates/index.html
+    - note.txt
