@@ -3,8 +3,13 @@ version: 0.2
 phases:
   install:
     commands:
-      - yum-get update
-      - yum-get install -y python3-tk
+      - yum update -y
+      - yum install -y python3-tkinter
+
   build:
     commands:
       - python3 notes.py
+
+artifacts:
+  files:
+    - notes.py
